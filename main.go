@@ -55,6 +55,10 @@ func (c *NPMClient) CreateProxy(proxy *Proxy) error {
 	return nil
 }
 
+func (c *NPMClient) PlaceHolder() error {
+	return nil
+}
+
 // Proxy represents a proxy configuration in NPM.
 type Proxy struct {
 	DomainNames           []string `json:"domain_names"`
