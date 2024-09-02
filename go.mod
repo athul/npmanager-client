@@ -1,3 +1,3 @@
-module github.com/athul/npm-client
+module github.com/athul/npmanager-client
 
 go 1.22.5
