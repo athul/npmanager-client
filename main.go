@@ -14,6 +14,7 @@ type NPMClient struct {
 	baseURL    string
 	apiKey     string
 	httpClient *http.Client
+	proxy      Proxy
 }
 
 // NewNPMClient creates a new NPMClient instance.
@@ -27,6 +28,7 @@ func NewNPMClient(baseURL, apiKey string) *NPMClient {
 
 // CreateProxy creates a new proxy in NPM.
 func (c *NPMClient) CreateProxy(proxy *Proxy) error {
+	proxy.AdvancedConfig = ""
 	data, err := json.Marshal(proxy)
 	log.Println(string(data))
 	if err != nil {
